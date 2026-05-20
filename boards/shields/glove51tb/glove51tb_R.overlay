@@ -4,20 +4,20 @@
 #include <input/processors.dtsi>
 
 &default_transform {
-    col-offset = <7>;
+    col-offset = <6>;
 };
 
-&kscan0 {
-        col-gpios
-            = <&xiao_d 10 GPIO_ACTIVE_HIGH>
-            , <&gpio1 7  GPIO_ACTIVE_HIGH>
-            , <&xiao_d 9  GPIO_ACTIVE_HIGH>
-            , <&gpio1 5  GPIO_ACTIVE_HIGH>
-            , <&xiao_d 8  GPIO_ACTIVE_HIGH>
-            , <&gpio1 3  GPIO_ACTIVE_HIGH>
-            , <&xiao_d 7  GPIO_ACTIVE_HIGH>
-            ;
-};
+//&kscan0 {
+//        col-gpios
+//            = <&xiao_d 10 GPIO_ACTIVE_HIGH>
+//            , <&gpio1 7  GPIO_ACTIVE_HIGH>
+//            , <&xiao_d 9  GPIO_ACTIVE_HIGH>
+//            , <&gpio1 5  GPIO_ACTIVE_HIGH>
+//            , <&xiao_d 8  GPIO_ACTIVE_HIGH>
+//            , <&gpio1 3  GPIO_ACTIVE_HIGH>
+//            , <&xiao_d 7  GPIO_ACTIVE_HIGH>
+//            ;
+//};
 
 / {
     trackball_listener {
@@ -40,17 +40,17 @@
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 4)>,
-                <NRF_PSEL(SPIM_MISO, 0, 4)>;
+            psels = <NRF_PSEL(SPIM_SCK, 1, 3)>,
+                <NRF_PSEL(SPIM_MOSI, 1, 5)>,
+                <NRF_PSEL(SPIM_MISO, 1, 5)>;
         };
     };
 
     spi0_sleep: spi0_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 4)>,
-                <NRF_PSEL(SPIM_MISO, 0, 4)>;
+            psels = <NRF_PSEL(SPIM_SCK, 1, 3)>,
+                <NRF_PSEL(SPIM_MOSI, 1, 5)>,
+                <NRF_PSEL(SPIM_MISO, 1, 5)>;
             low-power-enable;
         };
     };
@@ -64,14 +64,18 @@
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&xiao_d 6 GPIO_ACTIVE_LOW>;
+    // NCSピン: D19 (P1.07)
+    cs-gpios = <&gpio1 7 GPIO_ACTIVE_LOW>;
+    // cs-gpios = <&xiao_d 6 GPIO_ACTIVE_LOW>;
 
     trackball: trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        // MOTピン(割込み): D16 (P0.31)
+        irq-gpios = <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        // irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
