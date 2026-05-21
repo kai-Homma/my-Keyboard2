@@ -79,8 +79,8 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         swap-xy;      // マウス操作のX軸とY軸を入れ替え
-        invert-x;     // マウス操作のX軸を反転
-        invert-y;     // マウス操作のY軸を反転
+//        invert-x;     // マウス操作のX軸を反転
+//        invert-y;     // マウス操作のY軸を反転
         cpi = <400>;  // マウス感度
     };
 };

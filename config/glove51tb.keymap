@@ -87,7 +87,7 @@ keymap {
             // Row 3: QWERTY 下段
             &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B         &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
             // Row 4: 親指・モディファイア (片側5キーずつ)
-            &kp LCTRL  &kp LALT &mo 1 &mo 2 &kp SPACE            &kp B &mo 3 &mo 5 &kp RALT &kp CTRL
+            &kp LCTRL  &kp LALT &mo 1 &mo 2 &kp SPACE            &kp B &mo 3 &mo 5 &kp RALT &kp RCTRL
             >;
 
             sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>;
