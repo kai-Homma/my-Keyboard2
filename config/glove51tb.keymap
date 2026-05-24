@@ -87,7 +87,7 @@ keymap {
             // Row 3: QWERTY 下段
             &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B         &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
             // Row 4: 親指・モディファイア (片側5キーずつ)
-            &kp LCTRL  &kp LALT &kp SPACE &mo 1 &mo 2            &kp B &mo 3 &kp RALT &mo 5 &kp RCTRL
+            &kp LCTRL  &kp LALT &kp SPACE &mo 1 &mo 2            &kp B &kp RALT &mo 3 &mo 5 &kp RCTRL
             >;
 
             sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>;
@@ -121,8 +121,8 @@ keymap {
             bindings = <
             // 矢印キーやマウス操作を維持
             &trans &trans &trans &trans &trans &trans               &trans &trans   &trans   &trans &trans  &trans
-            &trans &trans &trans &trans &trans &trans               &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-            &trans &trans &trans &trans &trans &trans               &trans &trans   &mkp LCLK &mkp RCLK &mkp MCLK &trans
+            &trans &trans &trans &trans &trans &trans               &trans &trans   &kp UP   &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans               &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans
             &trans &trans &trans &trans &trans &mkp RCLK            &trans &trans   &trans   &trans &trans  &trans
             &trans &trans        &trans &trans &trans               &trans &trans   &trans          &trans  &trans
             >;
@@ -134,7 +134,7 @@ keymap {
             label = "MOUSE";
             bindings = <
             &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans       &trans &trans &mkp MCLK &trans &trans &trans
             &trans &trans &trans &trans &trans &trans       &trans &mkp LCLK  &mkp RCLK &trans &trans &trans
             &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
             &trans &trans        &trans &trans &trans       &trans &trans &trans        &trans &trans
