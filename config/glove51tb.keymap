@@ -85,9 +85,9 @@ keymap {
             // Row 2: QWERTY 中段 (ホームポジション)
             &kp LGUI &kp A  &kp S  &kp D  &kp F  &kp G         &kp H  &kp J  &kp K  &kp L  &kp MINUS &kp RET
             // Row 3: QWERTY 下段
-            &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B         &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &mo 5
+            &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B         &kp N  &kp M  &kp COMMA &kp DOT &kp UP &kp FSLH
             // Row 4: 親指・モディファイア (片側5キーずつ)
-            &kp LCTRL  &kp LALT &kp SPACE &mo 1 &mo 2            &kp B &kp RSHFT &mo 3 &kp RALT &kp RCTRL
+            &kp LCTRL  &kp LGUI &kp LALT &kp SPACE &mo 1 &mo 2   &mo 5 &kp RSHFT &mo 3 &kp LEFT &kp DOWN &kp RIGHT
             >;
 
             sensor-bindings = <&mouse_wheel_scroll SCRL_UP SCRL_DOWN>;
@@ -100,7 +100,7 @@ keymap {
             &trans &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5        &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &trans
             &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
-            &trans &trans        &trans &trans &trans       &trans &trans &trans        &trans &trans
+            &trans &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans &trans
             >;
         };
 
@@ -112,7 +112,7 @@ keymap {
             &trans &trans       &trans       &trans       &bt BT_CLR_ALL &bt BT_CLR         &kp EQUAL &trans  &kp RBKT &kp BSLH &kp LBKT   &trans
             &trans &trans       &trans       &trans       &trans         &ind_con           &ind_bat  &kp SQT   &kp GRAVE &trans  &trans   &trans
             &trans &trans       &trans       &trans       &trans         &trans             &trans    &trans    &trans   &trans   &kp LS(INT1) &trans
-            &trans &trans                    &trans       &trans         &trans             &trans    &trans    &trans            &trans   &trans
+            &trans &trans       &trans       &trans       &trans         &trans             &trans    &trans    &trans   &trans   &trans   &trans
             >;
         };
 
@@ -124,7 +124,7 @@ keymap {
             &trans &trans &trans &trans &trans &trans               &trans &trans   &kp UP   &trans &trans &trans
             &trans &trans &trans &trans &trans &trans               &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans
             &trans &trans &trans &trans &trans &mkp RCLK            &trans &trans   &trans   &trans &trans  &trans
-            &trans &trans        &trans &trans &trans               &trans &trans   &trans          &trans  &trans
+            &trans &trans &trans &trans &trans &trans               &trans &trans   &trans   &trans &trans  &trans
             >;
 
             sensor-bindings = <&sensor_rotate_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -137,7 +137,7 @@ keymap {
             &trans &trans &trans &trans &trans &trans       &trans &trans &mkp MCLK &trans &trans &trans
             &trans &trans &trans &trans &trans &trans       &trans &mkp LCLK  &mkp RCLK &trans &trans &trans
             &trans &trans &trans &trans &trans &trans       &trans &mkp MB4 &mkp MB5 &trans &trans &trans
-            &trans &trans        &trans &trans &trans       &trans &trans &trans        &trans &trans
+            &trans &trans &trans &trans &trans &trans       &trans &trans &trans  &trans &trans &trans
             >;
         };
 
@@ -149,7 +149,7 @@ keymap {
             &trans &trans &trans &trans &trans &trans       &trans &trans  &kp F11 &kp F12 &trans  &trans
             &trans &trans &trans &trans &trans &trans       &trans &trans  &trans  &trans  &trans  &trans
             &trans &trans &trans &trans &trans &trans       &trans &trans  &trans  &trans  &trans  &trans
-            &trans &trans        &trans &trans &trans       &trans &trans  &trans          &trans  &trans
+            &trans &trans &trans &trans &trans &trans       &trans &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
