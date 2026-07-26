@@ -141,10 +141,10 @@ keymap {
             bindings = <
             // F1〜F12を維持
             &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5       &kp F6 &kp F7  &kp F8  &kp F9  &kp F10 &trans
-            &trans &trans &trans &trans &trans &trans       &trans &trans  &kp F11 &kp F12 &trans  &trans
-            &trans &trans &trans &trans &trans &trans       &trans &trans  &trans  &trans  &trans  &trans
+            &trans &trans &trans &trans &trans &trans       &mkp MCLK &trans  &kp F11 &kp F12 &trans  &trans
+            &trans &trans &trans &trans &trans &trans       &mkp RCLK &trans  &trans  &trans  &trans  &trans
             &trans &trans &trans &trans &trans &trans       &mkp MB4 &mkp MB5  &trans  &trans  &trans  &trans
-            &trans &trans &trans &trans &trans &trans       &trans &trans  &trans  &trans  &trans  &trans
+            &trans &trans &trans &trans &trans &trans       &mkp LCLK &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
