@@ -117,7 +117,7 @@ keymap {
             // 矢印キーやマウス操作を維持
             &trans &trans &trans &trans &trans &trans               &trans &trans   &trans   &trans &trans  &kp LS(MINUS)
             &trans &trans &trans &trans &trans &trans               &trans &trans   &trans   &trans &trans  &kp LBKT
-            &trans &trans &trans &trans &trans &trans               &trans &kp EQUAL &kp INT_3   &trans &kp SEMI  &kp SQUT
+            &trans &trans &trans &trans &trans &trans               &trans &kp EQUAL &kp INT3   &trans &kp SEMI  &kp SQT
             &trans &trans &trans &trans &trans &trans               &trans &kp RBKT   &kp BSLH   &trans &kp SLASH  &kp LS(INT1)
             &trans &trans &trans &trans &trans &trans               &trans &trans   &trans   &trans &trans  &trans
             >;
